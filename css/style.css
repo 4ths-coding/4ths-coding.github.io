@@ -1053,7 +1053,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
-    animation: opacityLogin 1s ease-out 5.75s;
+    animation: opacityLogin 0.5s ease-out 4s;
     animation-fill-mode: backwards;
     z-index: 10; }
   .login__side {
