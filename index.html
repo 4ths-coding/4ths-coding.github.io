@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font: Josefin and Nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Compiled Sass File -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/compiled-sass.css">
+
+    <title>iACADEMY Welcome Kit</title>
+</head>
+
+<body>
+
+    <section class="section-login">
+        <!-- iac Logo -->
+        <div class="intro-message">
+            Welcome to
+            <img src="./img/iac-logo.webp" alt="iACADEMY logo" class="iac-bg-logo">
+        </div>
+
+        <!-- Grid -->
+        <div class="bg-animation">
+            <div class="bg-animation__top-left"><span>Dare</span></div>
+            <div class="bg-animation__top-right"><span>To</span></div>
+            <div class="bg-animation__bottom-left"><span>Be</span></div>
+            <div class="bg-animation__bottom-right"><span>Different</span></div>
+
+            <div class="login__shadow">
+                <div id="login" class="login">
+                    <div class="login__side login__side--front" onclick="setActiveLogin()">
+                        <img src="./img/iac-logo.webp" alt="iACADEMY logo" class="iac-logo mb-md">
+                        <h2 class="greetings">
+                            Greetings, <span class="gamechanger-text">Ready to change the game?</span>
+                        </h2>
+                        <p class="hover-click-text">
+                            Click to get started...
+                        </p>
+                    </div>
+
+                    <div class="login__side login__side--back">
+                        <img src="./img/iac-logo.webp" alt="iACADEMY logo" class="iac-logo mb-sm">
+                        <h2 class="heading-3 heading-3--white mb-md">Become a <span class="yellow-text">game
+                                changer</span> now!</h2>
+                        <form action="#" onsubmit="submitToSession(event)" class="form">
+                            <div class="form__group mb-xs">
+                                <input type="text" class="form__input" id="firstName" placeholder="First name" required>
+                                <label for="firstName" class="form__label">First Name</label>
+                            </div>
+                            <div class="form__group mb-xs">
+                                <select name="yrOrLevel" id="yrOrLevel" class="form__input form__dropdown" required onchange="updateProgramDropdown()">
+                                    <!-- Placeholder -->
+                                    <option value="" disabled selected>Select Year / Level</option>
+
+                                    <option value="Senior Highschool">Senior Highschool</option>
+                                    <option value="College">College</option>
+                                </select>
+                                <label for="yrOrLevel" class="form__label">Year / Level</label>
+                            </div>
+                            <div class="form__group mb-xs">
+                                <select name="program" id="program" class="form__input form__dropdown" required>
+                                    <!-- Placeholder -->
+                                    <option value="" disabled selected>Select Program</option>
+                                </select>
+                                <label for="program" class="form__label">Program</label>
+                            </div>
+                            <div class="form__group mb-xs">
+                                <button type="submit" class="btn-text">
+                                    Proceed <span>&rarr;</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/form.js" type="text/javascript"></script>
+</body>
+
+</html>

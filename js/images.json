@@ -1,0 +1,42 @@
+[
+  {
+    "url" : "../img/lobby.webp",
+    "alt" : "lobby"
+  },
+  {
+    "url" : "../img/auditorium.webp",
+    "alt" : "Auditorium"
+  },
+  {
+    "url" : "../img/computer-lab.webp",
+    "alt" : "computer lab"
+  },
+  {
+    "url" : "../img/mac-lab.webp",
+    "alt" : "mac-lab"
+  },
+  {
+    "url" : "../img/draw.webp",
+    "alt" : "draw"
+  },
+  {
+    "url" : "../img/studio1.webp",
+    "alt" : "studio1"
+  },
+  {
+    "url" : "../img/studio2.webp",
+    "alt" : "studio2"
+  },
+  {
+    "url" : "../img/com-lab2.webp",
+    "alt" : "com-lab2"
+  },
+  {
+    "url" : "../img/green.webp",
+    "alt" : "green"
+  },
+  {
+    "url" : "../img/sewing.webp",
+    "alt" : "sewing"
+  }
+]

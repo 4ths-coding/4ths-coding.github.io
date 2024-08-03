@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font: Josefin and Nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Welcome Kit</title>
+</head>
+
+<body>
+    <div class="search">
+        <input type="checkbox" class="search__checkbox" id="search-toggle">
+        <label for="search-toggle" class="search__button">
+            <svg class="search__icon">
+                <use xlink:href="../img/sprite.svg#icon-search"></use>
+            </svg>
+        </label>
+
+        <div class="search__background">&nbsp;</div>
+
+        <div class="search__search-area">
+            <div class="search__content">
+                <form action="#" class="search__form">
+                    <input type="text" class="search__input" placeholder="Search..." id="search">
+                    <label for="search" class="search__label">Enter search terms and press return</label>
+                </form>
+
+                <h4 class="heading-5 heading-5--blue">Popular searches</h4>
+                <ul class="list">
+                    <li class="quick-link__item list__item">
+                        <div class="quick-link__text">
+                            Email Us
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            Contact Us
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            Location
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            Facebook
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            Instagram
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            Tiktok
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            X
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+
+                        <div class="quick-link__text">
+                            YouTube
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <!-- &nbsp; means whitespace or empty -->
+        <div class="navigation__background">&nbsp;</div>
+
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item" onmouseenter="updateSublist('home')" onclick="scrollToSection('home')"><a
+                        href="#home" class="navigation__link">Home</a></li>
+                <li class="navigation__item" onmouseenter="updateSublist('about')" onclick="scrollToSection('about')"><a
+                        href="#about" class="navigation__link">About</a></li>
+                <li class="navigation__item" onmouseenter="updateSublist('campus')" onclick="scrollToSection('campus')">
+                    <a href="#campus" class="navigation__link">Campus</a>
+                </li>
+                <li class="navigation__item" onmouseenter="updateSublist('family')" onclick="scrollToSection('family')">
+                    <a href="#meet-iac" class="navigation__link">Meet the Family</a>
+                </li>
+                <li class="navigation__item" onmouseenter="updateSublist('facilities')"
+                    onclick="scrollToSection('facilities')"><a href="#facilities"
+                        class="navigation__link">Facilities</a></li>
+                <li class="navigation__item" onmouseenter="updateSublist('organizations')"><a href="#"
+                        class="navigation__link">Organizations</a></li>
+                <li class="navigation__item" onmouseenter="updateSublist('events')" onclick="scrollToSection('events')">
+                    <a href="#events" class="navigation__link">Events</a>
+                </li>
+                <li class="navigation__item" onmouseenter="updateSublist('others')" onclick="scrollToSection('others')">
+                    <a href="#others" class="navigation__link">Others</a>
+                </li>
+            </ul>
+
+            <div class="navigation__sublist" id="navigationSublist">
+                <!-- Sublist items will be dynamically populated -->
+            </div>
+
+            <div class="quick-link">
+                <h4 class="heading-5 heading-5--blue">Quicklinks</h4>
+                <ul class="list list--quicklink">
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-email"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Email Us
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-phone"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Contact Us
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-location-pin"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Location
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Facebook
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Instagram
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-tiktok"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            Tiktok
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-x"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            X
+                        </div>
+                    </li>
+                    <li class="quick-link__item list__item">
+                        <svg class="quick-link__icon">
+                            <use xlink:href="../img/sprite.svg#icon-youtube"></use>
+                        </svg>
+                        <div class="quick-link__text">
+                            YouTube
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="header" id="home">
+        <div class="top-heading">
+            <img src="../img/iac-logo-blue.webp" alt="iACADEMY Logo" class="top-heading__logo">
+            <button class="btn-inquire">
+                <svg class="btn-inquire__icon-info-with-circle">
+                    <use xlink:href="../img/sprite.svg#icon-info-with-circle"></use>
+                </svg>
+                <span class="btn-inquire__text">
+                    Inquire
+                </span>
+            </button>
+        </div>
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--sub">Welcome to</span>
+                <span class="heading-primary--main">iACADEMY</span>
+            </h1>
+        </div>
+    </header>
+
+    <section class="section-gallery-intro">
+        <div class="gallery-grid" id="galleryIntro">
+            <figure class="gallery-grid__item gallery-grid__item--1"><img src="../img/iac-life-full-left.webp"
+                    alt="Image 1" class="gallery-grid__img"></figure>
+            <figure class="gallery-grid__item gallery-grid__item--2"><img src="../img/iac-life-top-left.webp"
+                    alt="Image 2" class="gallery-grid__img"></figure>
+            <div class="gallery-grid__item gallery-grid__item--3 gallery-video">
+                <video class="gallery-video__content gallery-grid__fixed" autoplay muted loop>
+                    <source src="../img/campus-tour.mp4" type="video/mp4">
+                    <source src="../img/campus-tour.webm" type="video/webm">
+                    Your browser is not supported!
+                </video>
+                <img src="../img/partnership.webp" alt="makati campus" class="gallery-video__content--picture">
+            </div>
+            <figure class="gallery-grid__item gallery-grid__item--4"><img src="../img/iac-life-top-right.webp"
+                    alt="Image 4" class="gallery-grid__img"></figure>
+            <figure class="gallery-grid__item gallery-grid__item--5"><img src="../img/iac-life-full-right.webp"
+                    alt="Image 5" class="gallery-grid__img"></figure>
+            <figure class="gallery-grid__item gallery-grid__item--6"><img src="../img/iac-life-bot-left.webp"
+                    alt="Image 6" class="gallery-grid__img"></figure>
+            <figure class="gallery-grid__item gallery-grid__item--7"><img src="../img/iac-life-bot-right.webp"
+                    alt="Image 7" class="gallery-grid__img"></figure>
+        </div>
+    </section>
+
+    <main class="section-main">
+        <div class="about" id="about">
+            <h2 class="about__heading heading-1 mb-lg">About</h2>
+            <div class="about__text" id="aboutText">
+                <!-- Dynamically added by about.js -->
+            </div>
+
+            <div class="next-prev about__button">
+                <div class="next-prev__indicator mt-md">
+                    <div class="next-prev__button" onclick="setActiveSlide(1, event)"></div>
+                    <div class="next-prev__button" onclick="setActiveSlide(2, event)"></div>
+                    <div class="next-prev__button" onclick="setActiveSlide(3, event)"></div>
+                    <div class="next-prev__button" onclick="setActiveSlide(4, event)"></div>
+                    <div class="next-prev__button" onclick="setActiveSlide(5, event)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- swithcing info slash for campus (sliding info) -->
+
+        <div class="campus" id="campus">
+            <figure class="campus__text-area" id="campusTextArea">
+                <h2 class="heading-1 campus__heading mb-md" id="campusLocation">Campus</h2>
+                <div class="campus__paragraphs" id="campusParagraphs">
+                    <!-- Dynamically added by campus.js -->
+                </div>
+            </figure>
+            <figure class="campus__top">
+                <img src="../img/iacademy-makati.webp" alt="iACADEMY Makati" class="campus__img"
+                    onclick="setActiveCampus('Makati')" id="makati">
+                <figcaption class="campus__caption">Makati</figcaption>
+            </figure>
+            <figure class="campus__bottom">
+                <img src="../img/iacademy-cebu.webp" alt="iACADEMY Cebu" class="campus__img"
+                    onclick="setActiveCampus('Cebu')" id="cebu">
+                <figcaption class="campus__caption">Cebu</figcaption>
+            </figure>
+        </div>
+
+        <div class="meet-iac" id="meet-iac">
+            <h2 class="meet-iac__heading heading-1 heading-1--blue">Meet the family</h2>
+            <div class="meet-iac__nav iac-nav" id="meetIacNav">
+                <!-- Dots -->
+                <div class="iac-nav__dot-wrap iac-nav__dot-wrap--1" id="dotManCom"
+                    onclick="setFamGalleryActiveNav('managementCommittee')">
+                    <div class="iac-nav__dot"></div>
+                </div>
+                <div class="iac-nav__dot-wrap iac-nav__dot-wrap--2" id="dotAcaHea"
+                    onclick="setFamGalleryActiveNav('academicHeads')">
+                    <div class="iac-nav__dot"></div>
+                </div>
+                <div class="iac-nav__dot-wrap iac-nav__dot-wrap--3" id="dotDep"
+                    onclick="setFamGalleryActiveNav('departments')">
+                    <div class="iac-nav__dot"></div>
+                </div>
+
+                <!-- Line -->
+                <div class="iac-nav__line"></div>
+
+                <!-- Text -->
+                <div class="iac-nav__text iac-nav__text--1" id="managementCommittee"
+                    onclick="setFamGalleryActiveNav('managementCommittee')">Management committee</div>
+                <div class="iac-nav__text iac-nav__text--2" id="academicHeads"
+                    onclick="setFamGalleryActiveNav('academicHeads')">Academic heads</div>
+                <div class="iac-nav__text iac-nav__text--3" id="departments"
+                    onclick="setFamGalleryActiveNav('departments')">Departments</div>
+                <!-- <div class="iac-nav__text iac-nav__text--4" id="soda">School of Design and the Arts</div>
+                <div class="iac-nav__text iac-nav__text--5" id="sbla">School of Business and Liberal Arts</div>
+                <div class="iac-nav__text iac-nav__text--6" id="soc">School of Computing</div>
+                <div class="iac-nav__text iac-nav__text--7" id="shs">Senior Highschool</div> -->
+
+            </div>
+            <div class="meet-iac__gallery iac-gallery" id="iacGallery">
+                <!-- Dynamically added by meetIac.js -->
+            </div>
+        </div>
+
+        <div class="container" id="facilities">
+            <h2 class="heading-1 heading-1--white mb-sm">Our Facilities</h2>
+
+            <div class="slider">
+              <div class="slider__progress"></div>
+              <div class="slider__btn-container">
+                <button class="slider__btn slider__btn--left" aria-label="Move to previous slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="slider__btn slider__btn--right" aria-label="Move to next slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+              <div class="slide"></div>
+            </div>
+
+            <!-- Ground Floor is just a test -->
+            <!--<h3 class="heading-3 heading-3--yellow-dark" id="facilityFloor">
+                <!-- Dyanmic by facilities.js >
+            </h3>
+
+            <div class="facilities-gallery__nav mb-md">
+                <div class="prev" onclick="plusFacility(-1)">
+                    &larr; <span id="prevFloor">
+                        <!-- Dyanmic by facilities.js >
+                    </span>
+                </div>
+                <div class="next" onclick="plusFacility(1)">
+                    &rarr; <span id="nextFloor">
+                        <!-- Dyanmic by facilities.js >
+                    </span>
+                </div>
+            </div>
+
+            <div class="facilities-gallery" id="facilitiesGallery">
+                <!-- Dynamic by facilities.js ->
+            </div>-->
+        </div>
+
+
+        <div class="events" id="events">
+            <!-- Copy best flex animation + half the background-->
+            <h2 class="heading-1 heading-1--blue">
+                Events
+                <span>to watch out for</span>
+            </h2>
+
+            <!-- – -->
+            <div class="events-gallery">
+                <figure class="events-gallery__item">
+                    <img src="../img/soar.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Student Orientation and Registration (SOAR)</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">New SHS students are welcomed at SOAR (Student Orientation and Registration). An event that is held a week before the start of classes, to introduce the students around the campus.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/foundation.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">iACADEMY Foundation Week</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">
+                            Foundation Week at iACADEMY celebrates the institution’s milestones with workshops, guest speakers, and community events, showcasing student talents and innovations.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/therapets.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Therapets</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">
+                            TheraPETS is iACADEMY’s animal-assisted intervention that supports mental health through the comfort and companionship of pets, offering joy and a calming, meditative experience.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/pbl.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">PBL Expo</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">Our Senior High School students were challenged to showcase their most innovative, creative, and sustainable solutions for the community. Visit the PBL Expo</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/event.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Battle League</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">iACADEMY's Battle League on May 4-5 at the Nexus Auditorium is a 24-hour VALORANT tournament featuring 16 teams from various schools, with a P25,000 grand prize. The event promotes personal growth, creativity, and leadership through gaming.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/creativecamp.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Creative Camp</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/recognition.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Recognition Day</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">iACADEMY Recognition Day celebrates student achievements and excellence, honoring top performers and outstanding contributions across various fields.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/gruduation.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Graduation Day</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">iACADEMY Graduation Day marks the culmination of students' academic journeys, celebrating their achievements and awarding diplomas in a formal ceremony.</p>
+                    </figcaption>
+                </figure>
+                <figure class="events-gallery__item">
+                    <img src="../img/special-event.webp" alt="Event" class="events-gallery__img">
+                    <figcaption class="events-gallery__text">
+                        <h3 class="events-gallery__name">Special Events</h3>
+                        <span class="events-gallery__date-and-indicator">
+                            <h4 class="events-gallery__date">Jan. 9, 2024</h4>
+                            <div class="events-gallery__indicator">+</div>
+                        </span>
+                        <p class="events-gallery__description">iACADEMY Special Events showcase a variety of unique activities and celebrations throughout the year, including workshops, competitions, and cultural festivals, designed to enhance the student experience and foster community engagement.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="checklist" id="others">
+            <h2 class="heading-1 heading-1--white checklist__heading">Game Changer Check List</h2>
+            <p class="paragraph checklist__subheading">Make sure to complete all these steps</p>
+            <div class="checklist__step checklist__step--1 heading-1 heading-1--blue">Step 1</div>
+            <div class="checklist__step checklist__step--2 heading-1 heading-1--blue">Step 2</div>
+            <div class="checklist__step checklist__step--3 heading-1 heading-1--blue">Step 3</div>
+            <div class="checklist__step checklist__step--4 heading-1 heading-1--blue">Step 4</div>
+            <div class="checklist__step-content checklist__step-content--1">
+                <h3>Admissions Department</h3>
+                <ul>
+                    <li>Application Process</li>
+                    <li>Reservation Process</li>
+                    <li>Enrollment Process</li>
+                    <li>Submission of Pending Requirements</li>
+                </ul>
+            </div>
+            <div class="checklist__step-content checklist__step-content--2">
+                <h3>IT Department</h3>
+                <ul>
+                    <li>Schedule ID Picture Taking</li>
+                    <li>Configure NEO LMS Account</li>
+                </ul>
+            </div>
+            <div class="checklist__step-content checklist__step-content--3">
+                <h3>Clinic</h3>
+                <ul>
+                    <li>Fill Out Clinic Form</li>
+                </ul>
+            </div>
+            <div class="checklist__step-content checklist__step-content--4">
+                <h3>SOAR</h3>
+                <ul>
+                    <li>Get ready to start your Game Changing Journey!</li>
+                </ul>
+            </div>
+            <!-- <div class="checklist-circle" id="checklistCircle" onclick="nextList(1)">
+                <div class="checklist-circle__item checklist-circle__item--1">
+                    <h3 class="checklist-circle__item-heading first">
+                        Step 1: Admission Department
+                    </h3>
+                    <ul class="checklist-list">
+                        <li class="checklist-list__item">Application Process</li>
+                        <li class="checklist-list__item">Reservation Process</li>
+                        <li class="checklist-list__item">Enrollment Process</li>
+                        <li class="checklist-list__item">Submission of Pending Requirements</li>
+                    </ul>
+                </div>
+                <div class="checklist-circle__item checklist-circle__item--2">
+                    <h3 class="checklist-circle__item-heading second">
+                        Step 2: IT Department
+                    </h3>
+                    <ul class="checklist-list">
+                        <li class="checklist-list__item">ID Picture Taking</li>
+                        <li class="checklist-list__item">Configure and Activate NEO LMS Account</li>
+                    </ul>
+                </div>
+                <div class="checklist-circle__item checklist-circle__item--4">
+                    <h3 class="checklist-circle__item-heading third">
+                        Step 3: Clinic</h3>
+                    <ul class="checklist-list">
+                        <li class="checklist-list__item">Medical and Dental Check up</li>
+                    </ul>
+                </div>
+                <div class="checklist-circle__item checklist-circle__item--5">
+                    <h3 class="checklist-circle__item-heading fourth">
+                        Step 4: Online Student Orientation
+                    </h3>
+                </div>
+                <div class="checklist-circle__item checklist-circle__item--3">
+                    <h3 class="checklist-circle__item-heading last">SOAR 2024!</h3>
+                </div>
+            </div> -->
+            <!-- <div class="card" id="card" onclick="flipCard()">
+                <div class="card__side card__side--front">
+                    <div class="card__picture card__picture--2">
+                        &nbsp;
+                    </div>
+                    <h4 class="card__heading">
+                        <span class="card__heading-span card__heading-span--2">First Day Must Haves</span>
+                    </h4>
+                    <div class="card__details">
+                        <ul class="up">
+                            <li class="bold">Notebook</li>
+                            <li class="bold">Pen</li>
+                            <li>Laptop/PC Specs - to follow</li>
+                            <li>Softwares to install - to follow</li>
+                            <li>Camera Specs - to follow</li>
+                            <li>Other Equipment - to follow</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-2">
+                    <div class="card__cta">
+                        <div class="card__price-box">
+                            <p class="card__price-only">Ready to Change the Game?</p>
+                        </div>
+                        <a href="#popup" class="goodluck">Goodluck, Game Changer!</a>
+                    </div>
+                </div>
+            </div>
+ -->
+        </div>
+
+
+
+
+        <!-- first-day in desktop view is just an image except for the spinning wheel -->
+        <div class="first-day" onclick="clicked()">
+            <div class="first-day__mobile-view-text">
+                <!-- Dyanamically modified by first-day.js -->
+
+            </div>
+            <div class="first-day__circle">
+                <!-- first-day__header is dynamically modifed by first-day.js -->
+                <div class="first-day__header first-day__header--1">
+                    <span class="heading-1--blue">First Day Must Haves</span>
+                </div>
+                <div class="first-day__header first-day__header--2">
+                    <span class="heading-1--blue">Recommended Specifications for Laptop</span>
+                </div>
+                <div class="first-day__header first-day__header--3">
+                    <span class="heading-1--blue">Recommended Specifications for Other Gadgets</span>
+                </div>
+                <div class="first-day__header first-day__header--4">
+                    <span class="heading-1--blue">Recommended Softwares/Applications</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dev" id="dev">
+            <h2 class="dev__heading heading-1 heading-1--blue mb-lg">Developers</h2>
+            <div class="dev__profile--left">
+              <img src="../img/richard.jpg" class="dev__image--left">
+              <div class="dev__text">
+                  <h2>Richard M. Sahagun Jr.</h2>
+                  <p>A second-year college student at iACADEMY. Passionate about web development and committed to using my skills to help others.</p>
+                </div>
+            </div>
+            <div class="dev__profile--right">
+              <img src="../img/marjorie.webp" class="dev__image--right">
+              <div class="dev__text">
+                  <h2>Marjorie Cinco</h2>
+                  <p>An explorer at heart, always eager to discover new perspectives and knowledge beyond the confines of traditional education. Thrives on curiosity, constantly seeking out experiences and insights from around the world.</p>
+              </div>
+            </div>
+            <div class="dev__profile--left">
+                <img src="../img/niko.webp" class="dev__image--left">
+                <div class="dev__text">
+                    <h2>Niko Tanato</h2>
+                    <p>My name is Niko M. Tanato a second year student 30-year-old BS-IT web development student at iAcademy Makati, driven by a strong desire to succeed in the IT industry. I have a passion for exploring new technologies and concepts, and I am always eager to learn and grow. My goal is to continuously improve my skills and knowledge to provide effective and innovative services to people of all ages, ensuring that I make a positive impact in their lives.</p>
+                </div>
+              </div>
+              <div class="dev__profile--right">
+                <img src="../img/micah.webp" class="dev__image--left">
+                <div class="dev__text">
+                    <h2>Micah Louise Rocero</h2>
+                    <p>Hello! My name is Micah Rocero and I am an incoming third-year student at iACADEMY, pursuing a Bachelor of Science in Information Technology with a major in Web Development. Passionate about creating and designing, I am eager to deepen my knowledge and skills in the field. My enthusiasm for learning and dedication to my craft help me to excel in my studies and future career.</p>
+                </div>
+              </div>
+              <div class="dev__profile--left">
+                <img src="../img/cordell.webp" class="dev__image--left">
+                <div class="dev__text">
+                    <h2>Cordell Phil Garcia</h2>
+                    <p>A relentless innovator, always striving to push the boundaries of conventional learning. Driven by an insatiable curiosity, constantly pursuing new experiences and insights in back-end development.</p>
+                </div>
+              </div>
+              <div class="dev__profile--right">
+                <img src="../img/sean.jpg" class="dev__image--left">
+                <div class="dev__text">
+                    <h2>Sean Inserto</h2>
+                    <p>A passionate coder, dedicated to mastering the art of web development. Always seeking to enhance skills and contribute to impactful projects.</p>
+                </div>
+              </div>
+        </div>
+
+    </main>
+
+    <script src="../js/navigation.js" type="text/javascript"></script>
+    <script src="../js/search.js" type="text/javascript"></script>
+
+    <script src="../js/galleryGrid.js" type="text/javascript"></script>
+    <script src="../js/about.js" type="text/javascript"></script>
+    <script src="../js/campus.js" type="text/javascript"></script>
+    <script src="../js/meetIac.js" type="text/javascript"></script>
+    <script src="../js/facilities.js" type="text/javascript"></script>
+    <script src="../js/checklistCircle.js" type="text/javascript"></script>
+    <script src="../js/events.js" type="text/javascript"></script>
+    <script src="../js/card.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Scroll to top when the page is unloaded (useful for reloads)
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+
+        // Scroll to top when the page is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            window.scrollTo(0, 0);
+        });
+
+        // Ensure scroll position is set after all content is fully loaded
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <script src="../js/first-day.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font: Josefin and Nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/compiled-sass.css">
+    <title>Welcome Message</title>
+</head>
+
+<body>
+    <section class="section-welcome">
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="../img/campus-tour.mp4" type="video/mp4">
+                <source src="../img/campus-tour.webm" type="video/webm">
+                <!-- If none of the source can be played then this text text will show up -->
+                Your browser is not supported!
+            </video>
+        </div>
+
+        <!-- Use JS to change the name -->
+        <h2 class="welcome-message welcome-message--1">
+            Hello, <span class="welcome-message__highlight" id="firstName">User</span>
+        </h2>
+        <h2 class="welcome-message welcome-message--2">
+            Welcome to <span class="welcome-message__highlight">iACADEMY.</span>
+        </h2>
+        <h2 class="welcome-message welcome-message--3">
+            You're an official <span class="welcome-message__highlight">Game Changer!</span>
+        </h2>
+        <h2 class="welcome-message welcome-message--4">
+            This <span class="welcome-message__highlight">Welcome Kit</span> will guide you to your <span class="welcome-message__highlight">game-changing journey.</span>
+        </h2>
+        <h2 class="welcome-message welcome-message--5">
+            Buckle up
+        </h2>
+        <h2 class="welcome-message welcome-message--6">
+            And hit the button below to start!
+        </h2>
+
+        <div onclick="startLandingPage()" class="welcome-message--button__shadow">
+            <a href="#" class="welcome-message welcome-message--button"></a>
+        </div>
+    </section>
+
+    <script src="../js/welcome.js" type="text/javascript"></script>
+</body>
+
+</html>
