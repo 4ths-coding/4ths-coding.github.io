@@ -2,11 +2,11 @@ const family = {
     managementCommittee: [
         {
             name: "Dr. Vanessa Tanco",
-            position: "CEO & President"
+            position: "CEO "
         },
         {
             name: "Ms. Raquel P. Wong",
-            position: "COO"
+            position: "COO & President"
         },
         {
             name: "Ms. Cecilia Sy",
@@ -286,24 +286,24 @@ const galleryManagementCommittee = `
                 <figure class="iac-gallery__item iac-gallery__item--6 mc">
                     <div class="iac-gallery__content iac-gallery__content--6">
                         <figcaption class="iac-gallery__caption">
-                            <h4 class="name">${family.managementCommittee[0].name}</h4>
-                            <h5 class="position">${family.managementCommittee[0].position}</h5>
+                            <h4 class="name">${family.managementCommittee[5].name}</h4>
+                            <h5 class="position">${family.managementCommittee[5].position}</h5>
                         </figcaption>
                     </div>
                 </figure>
                 <figure class="iac-gallery__item iac-gallery__item--7 u-gallery-last-item">
                     <div class="iac-gallery__content iac-gallery__content--7">
                         <figcaption class="iac-gallery__caption">
-                            <h4 class="name">${family.managementCommittee[1].name}</h4>
-                            <h5 class="position">${family.managementCommittee[1].position}</h5>
+                            <h4 class="name">${family.managementCommittee[6].name}</h4>
+                            <h5 class="position">${family.managementCommittee[6].position}</h5>
                         </figcaption>
                     </div>
                 </figure>
                 <figure class="iac-gallery__item iac-gallery__item--8">
                     <div class="iac-gallery__content iac-gallery__content--8">
                         <figcaption class="iac-gallery__caption">
-                            <h4 class="name">${family.managementCommittee[2].name}</>
-                            <h5 class="position">${family.managementCommittee[2].position}</h5>
+                            <h4 class="name">${family.managementCommittee[7].name}</>
+                            <h5 class="position">${family.managementCommittee[7].position}</h5>
                         </figcaption>
                     </div>
                 </figure>
