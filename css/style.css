@@ -1730,6 +1730,9 @@ body {
     .campus__img.active {
       transform: scale(1);
       object-position: 25% 0%; }
+    .campus__img:not(.active)   {
+      filter: brightness(70%) blur(3px);
+    }
   .campus__caption {
     font-family: var(--font-display);
     font-size: 7rem;

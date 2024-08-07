@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     campusParagraphs.innerHTML = campus.makati.paragraphs;
 
 
-
+    setActiveCampus('Makati')
 
 
     // Animate when scrolled in the position
