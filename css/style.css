@@ -1053,7 +1053,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
-    animation: opacityLogin 0.5s ease-out 4s;
+    animation: opacityLogin 0.5s ease-out 3s;
     animation-fill-mode: backwards;
     z-index: 10; }
   .login__side {
@@ -1283,7 +1283,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-  .section-gallery-intro.cover .gallery-video__content {
+  /*.section-gallery-intro.cover .gallery-video__content {
     display: none;
   }
     .gallery-video__content--picture {
@@ -1295,7 +1295,7 @@ body {
   .section-gallery-intro.cover .gallery-video__content--picture {
     display: block;
     object-position: bottom;
-  }
+  }*/
 
 .welcome-message {
   position: absolute;
@@ -1522,7 +1522,9 @@ body {
   color: var(--color-secondary-dark-4);
   margin: 25rem 20rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  z-index: 1;
+  position: relative;}
   @media only screen and (max-width: 48em) {
     .about {
       margin: 25rem 5rem; } }
@@ -2910,7 +2912,7 @@ body {
       .bg-animation > *:not(:last-child) {
         /*z-index: 2;*/ } }
   .bg-animation__top-left {
-    animation: animateTopLeft 0.5s ease-out 0.5s;
+    animation: animateTopLeft 0.5s ease-out 1s;
     background-image: linear-gradient(to right bottom, rgba(160, 238, 255, 0.8) 0%, rgba(68, 101, 108, 0.8) 80%), url(../img/shs.webp);
     background-position: top; }
     .bg-animation__top-left span {
@@ -2919,7 +2921,7 @@ body {
         .bg-animation__top-left span {
           transform: translate(0); } }
   .bg-animation__top-right {
-    animation: animateTopRight 0.5s ease-out 1s;
+    animation: animateTopRight 0.5s ease-out 1.5s;
     background-image: linear-gradient(to left bottom, rgba(216, 208, 23, 0.8) 0%, rgba(102, 99, 12, 0.8) 80%), url(../img/soc.webp);
     background-position: top; }
     .bg-animation__top-right span {
@@ -2928,7 +2930,7 @@ body {
         .bg-animation__top-right span {
           transform: translate(0); } }
   .bg-animation__bottom-left {
-    animation: animateBottomLeft 0.5s ease-out 1.5s;
+    animation: animateBottomLeft 0.5s ease-out 2s;
     background-image: linear-gradient(to right top, rgba(202, 29, 29, 0.8) 0%, rgba(87, 13, 13, 0.8) 80%), url(../img/sbla.webp); }
     .bg-animation__bottom-left span {
       transform: translate(0, 75%); }
@@ -2936,7 +2938,7 @@ body {
         .bg-animation__bottom-left span {
           transform: translateY(30px); } }
   .bg-animation__bottom-right {
-    animation: animateBottomRight 0.5s ease-out 2s;
+    animation: animateBottomRight 0.5s ease-out 2.5s;
     background-image: linear-gradient(to left top, rgba(0, 166, 203, 0.8) 0%, rgba(0, 69, 85, 0.8) 80%), url(../img/soda.webp);
     background-position: center; }
     .bg-animation__bottom-right span {
@@ -3939,7 +3941,7 @@ body {
       }
 
 
-/* .checklist-circle {
+ .checklist-circle {
   width: 80rem;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -4006,7 +4008,7 @@ body {
       font-family: var(--font-primary);
       font-size: 1.4rem;
       color: #000; }
- */
+
 .section-welcome {
   background-color: var(--color-primary);
   width: 100vw;
@@ -4026,7 +4028,7 @@ body {
 
 .section-gallery-intro {
   width: 100vw;
-  height: 150vh;
+  height: 100vh;
   overflow: visible;
   position: relative;
   transform: translateY(-50rem);
@@ -4121,7 +4123,7 @@ body {
   width: 100vw;
   background-color: rgba(17, 45, 78, 0.8);
   position: absolute;
-  margin-top: 90rem;
+  margin-top: 50rem;
   z-index: 1;
   overflow: hidden; }
 
@@ -4330,4 +4332,22 @@ body {
   10% {
     right: -3px;
   }
+}
+
+.about__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/partnership.webp') no-repeat center center/cover;
+    z-index: -2; /* Ensure the background is behind the overlay */
+    filter: brightness(0.5); /* Dim the background image */
+}
+
+.about__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

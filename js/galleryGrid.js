@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const introGallery = document.getElementById('galleryIntro');
     const introGalleryPosition = introGallery.offsetTop;
 
-    // Main gallery container 
+    // Main gallery container
     const mainIntroGallery = document.querySelector(".section-gallery-intro");
 
     const handleScroll = () => {
@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (scrollPosition >= introGalleryPosition) {
             introGallery.classList.add('cover');
-
-                mainIntroGallery.classList.add('cover');
+            mainIntroGallery.classList.add('cover');
         } else {
             introGallery.classList.remove('cover');
             mainIntroGallery.classList.remove('cover');

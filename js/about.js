@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const about = document.getElementById("about");
 
-    const aboutPositionPercentage = 20  ; // Example: 50% of the maximum scrollable value
+    const aboutPositionPercentage = 15  ; // Example: 50% of the maximum scrollable value
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
         const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
         const aboutPosition = maxScrollY * (aboutPositionPercentage / 100);
-        const thresholdPosition = Math.min(aboutPosition, 1200); // Use the lesser of aboutPosition or 1300
+        const thresholdPosition = Math.min(aboutPosition, 1000); // Use the lesser of aboutPosition or 1300
 
         console.log('maxScrollY:', maxScrollY); // Log the value of maxScrollY
         console.log('aboutPosition:', aboutPosition); // Log the value of aboutPosition

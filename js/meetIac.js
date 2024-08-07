@@ -127,13 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add scroll event listener
     // window.addEventListener('scroll', arrangeGallery);
 
-    const meetIacPositionPercentage = 50  ; // Example: 50% of the maximum scrollable value
+    const meetIacPositionPercentage = 40  ; // Example: 50% of the maximum scrollable value
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
         const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
         const meetIacPosition = maxScrollY * (meetIacPositionPercentage / 100);
-        const thresholdPosition = Math.min(meetIacPosition, 3200); // Use the lesser of aboutPosition or 1300
+        const thresholdPosition = Math.min(meetIacPosition, 2900); // Use the lesser of aboutPosition or 1300
 
         console.log('maxScrollY:', maxScrollY); // Log the value of maxScrollY
         console.log('meetIacPosition:', meetIacPosition); // Log the value of aboutPosition
