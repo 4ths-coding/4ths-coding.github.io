@@ -26,7 +26,7 @@ html {
   --color-red: red;
   --color-green: rgb(0, 183, 0);
   --color-blue-light-1: #b3d8ff;
-  --color-shs: #a0eeff;
+  --color-shs: #00d1ff;
   --color-shs-dark: #44656c;
   --color-shs-dark-1: rgb(58, 86, 93);
   --color-soc: #d8d017;
@@ -1746,7 +1746,9 @@ body {
     top: 60%;
     left: 55%;
     transition: all 1s ease 1.5s;
-    transform: translateY(25rem); }
+    transform: translateY(25rem);
+    filter: drop-shadow(0px 0px 0px black);
+  }
     @media only screen and (max-width: 64em) {
       .campus__caption {
         transform: translate(-5rem, 25rem); } }
@@ -2469,12 +2471,16 @@ body {
     .iac-gallery__caption > .name {
       font-family: var(--font-display);
       font-size: 1rem;
-      color: var(--color-yellow); }
+      color: var(--color-yellow);
+      text-shadow: 0 0 5px black;
+     }
     .iac-gallery__caption > .position {
       font-family: var(--font-primary);
       font-size: .8rem;
       font-weight: 400;
-      color: var(--color-secondary); }
+      color: var(--color-secondary);
+      text-shadow: 0 0 1px black;
+  }
   .iac-gallery__content:hover .iac-gallery__caption,
   .iac-gallery__content.active .iac-gallery__caption {
     transition: all .5s ease; }
@@ -4249,6 +4255,7 @@ body {
 .slide img {
   width: 100%;
   flex: 1 0 100%;
+  margin-right: 10px;
   object-fit: contain;
 }
 

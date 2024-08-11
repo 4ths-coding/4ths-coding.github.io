@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
       const slide = document.querySelector('.slide');
       const root = document.querySelector(':root');
-      let slideIndex = 1;
+      let slideIndex = 0;
       let isMoving = false;
 
       function processImages(item) {
@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       function moveSlides() {
-        slide.style.transform = `translateX(-${slideIndex * 100}%)`;
         const slidesArray = [...slide.querySelectorAll('img')];
+        const padding = 10;
+        const slideWidth = slide.clientWidth + padding; // Adjusting for padding
+        slide.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
         root.style.setProperty('--slide-progress', `${(100 / (slidesArray.length - 3)) * (slideIndex - 1)}%`);
+
+        slidesArray.forEach((img, index) => {
+        if (index === slideIndex) {
+            img.style.filter = 'drop-shadow(0px 0px 6px white)'; // Remove blur from the active image
+        } else {
+            img.style.filter = 'blur(8px)'; // Add blur to non-active images
+        }
+    });
       }
 
       function moveHandler(direction) {
@@ -32,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
           data.unshift(data[data.length - 2]);
           slide.innerHTML = data.map(processImages).join('');
           moveSlides();
+          setTimeout(() => {
+      moveHandler('right');
+      console.log('MOVE RIGHT');
+    }, 100);
         } catch (error) {
           console.error('There has been a problem with your fetch operation:', error);
         }
