@@ -1747,7 +1747,7 @@ body {
     left: 55%;
     transition: all 1s ease 1.5s;
     transform: translateY(25rem);
-    filter: drop-shadow(0px 0px 0px black);
+    filter: drop-shadow(0px 0px 2px black);
   }
     @media only screen and (max-width: 64em) {
       .campus__caption {
@@ -3189,7 +3189,8 @@ body {
   .quick-link__text {
     color: var(--color-secondary-dark);
     font-size: var(--default-font-size);
-    font-weight: 550; }
+    font-weight: 550;
+  }
     @media only screen and (max-width: 50em) {
       .quick-link__text {
         display: none; } }
@@ -3201,6 +3202,19 @@ body {
     fill: var(--color-secondary); }
   .quick-link__item:hover .quick-link__text {
     color: var(--color-secondary); }
+
+  .quick-link__text a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Inherits color from parent element */
+    font: inherit;         /* Inherits font styles from parent element */
+
+  }
+  .quick-link__item  a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Inherits color from parent element */
+    font: inherit;         /* Inherits font styles from parent element */
+
+  }
 
 .gallery-grid {
   width: 100%;

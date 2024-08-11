@@ -1,11 +1,7 @@
 // Object to store sublist items for each main navigation item
 const sublistContent = {
-    home: [
-        
-    ],
-    about: [
-        
-    ],
+    home: [],
+    about: [],
     campus: [
         { text: 'MAKATI CAMPUS', link: '#campus' },
         { text: 'CEBU CAMPUS', link: '#campus' }
@@ -15,34 +11,23 @@ const sublistContent = {
         { text: 'ACADEMIC HEADS', link: '#meet-iac' },
         { text: 'DEPARTMENTS', link: '#meet-iac' }
     ],
-    facilities: [
-        { text: 'MEZZANINE', link: '#facilities' },
-        { text: 'CAFETERIA', link: '#facilities' },
-        { text: 'LIBRARY', link: '#facilities' },
-        { text: 'SEWING ROOM', link: '#facilities' },
-        { text: 'FASHION DESIGN ROOM', link: '#facilities' },
-        { text: 'GREEN ROOM', link: '#facilities' },
-        { text: 'SOUND ROOM', link: '#facilities' },
-        { text: 'MULTIMEDIA ARTS LABORATORY', link: '#facilities' },
-        { text: 'MORE', link: '#facilities' },
-    ],
+    facilities: [],
     organizations: [
-        { text: 'Sublist Organizations 1', link: '#' },
-        { text: 'Sublist Organizations 2', link: '#' },
-        { text: 'Sublist Organizations 3', link: '#' }
+        { text: 'Compile', link: 'https://www.facebook.com/iacademycompile', newTab: true },
+        { text: 'Elix', link: 'https://www.facebook.com/ElixEsports', newTab: true },
+        { text: 'FSi', link: 'https://www.facebook.com/fsi.iacademy', newTab: true },
+        { text: 'iNSIGHT ', link: 'https://www.facebook.com/iACiNSIGHT', newTab: true },
+        { text: 'Octave', link: 'https://www.facebook.com/iAcademyOCTAVE', newTab: true },
+        { text: 'Optics', link: 'https://www.facebook.com/iacademyoptics', newTab: true },
+        { text: 'Pikzel', link: 'https://www.facebook.com/PikzelGraphicDesign', newTab: true },
+        { text: 'PRIMA', link: 'https://www.facebook.com/PRIMAofiACADEMY', newTab: true },
+        { text: 'RHYTHM', link: 'https://www.facebook.com/iacademyrhythm', newTab: true },
+        { text: 'The Moonlight Tavern', link: 'https://www.facebook.com/TheMoonlightTavern', newTab: true }
     ],
-    events: [
-        { text: 'Student Orientation and Registration (SOAR)', link: '#events' },
-        { text: 'iACADEMY Foundation Week', link: '#events' },
-        { text: 'Therapets', link: '#events' },
-        { text: 'PBL Expo', link: '#events' },
-        { text: 'Battle League', link: '#events' },
-        { text: 'Creative Camp', link: '#events' },
-        { text: 'Recognition Day', link: '#events' },
-        { text: 'MORE', link: '#events' },
-    ],
+    events: [],
     others: [
-        
+      { text: 'CHECKLIST', link: '#others' },
+      { text: 'DEVELOPERS', link: '#dev' }
     ]
 };
 
@@ -66,6 +51,25 @@ function updateSublist(key) {
         a.href = subitem.link;
         a.className = 'navigation__sublink';
         a.textContent = subitem.text;
+
+        // Check if the link should open in a new tab
+        if (subitem.newTab) {
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+        }
+        // Add event listener to uncheck the navigation toggle
+        a.addEventListener('click', () => {
+            const naviToggle = document.getElementById('navi-toggle');
+            naviToggle.checked = false;
+        });
+
+        // Add specific event listeners for campus and family sublist items
+        if (key === 'campus') {
+            a.addEventListener('click', () => trigActiveCampus(subitem.text));
+        } else if (key === 'family') {
+            a.addEventListener('click', () => trigFamGalleryActiveNav(subitem.text));
+        }
+
         // Append the anchor element to the list item element
         item.appendChild(a);
         // Append the list item element to the sublist element
@@ -79,6 +83,37 @@ function updateSublist(key) {
 
     // Make sure the sublist is displayed
     sublist.style.display = 'block';
+}
+
+// Define the setActiveCampus function
+function trigActiveCampus(campus) {
+    console.log(`Active campus: ${campus}`);
+    if (campus === 'MAKATI CAMPUS'){
+      setActiveCampus('Makati');
+    }
+    if (campus === 'CEBU CAMPUS'){
+      setActiveCampus('Cebu');
+    }
+    // Add your logic here
+}
+
+// Define the setFamGalleryActiveNav function
+function trigFamGalleryActiveNav(nav) {
+    console.log(`Active family gallery nav: ${nav}`);
+    if (nav === 'MANAGEMENT COMMITTEE'){
+      setFamGalleryActiveNav('managementCommittee');
+      console.log(nav);
+    }
+    if (nav === 'ACADEMIC HEADS'){
+      setFamGalleryActiveNav('academicHeads');
+      console.log(nav);
+    }
+    if (nav === 'DEPARTMENTS'){
+      setFamGalleryActiveNav('departments');
+      console.log(nav);
+    }
+
+    // Add your logic here
 }
 
 // Make the function globally available
@@ -115,14 +150,17 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     const aboutsection = document.getElementById("about");
+    const naviToggle = document.getElementById('navi-toggle');
 
-    if (sectionId == "about") { 
+    if (sectionId == "about") {
         aboutsection.classList.add("shown")
-        
+        naviToggle.checked = false;
+
     } else {
         section.scrollIntoView({
             behavior: 'smooth'
           });
+        naviToggle.checked = false;
     }
 
     /*
@@ -135,4 +173,4 @@ function scrollToSection(sectionId) {
   }
 
 
-  // ADD Parameter if about, then add about.shown 
+  // ADD Parameter if about, then add about.shown
