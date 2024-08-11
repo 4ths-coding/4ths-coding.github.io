@@ -1802,7 +1802,7 @@ body {
   @media only screen and (max-width: 31.25em) {
     .meet-iac {
       padding: 2rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 26.56em){
     .meet-iac {
       height: 225vw; } }
   .meet-iac__heading {
@@ -2250,7 +2250,7 @@ body {
       @media only screen and (max-width: 26.56em) {
         .iac-gallery__item--departments {
           width: 130%;
-          transform: translateX(15rem); } }
+          transform: translateX(9.4rem); } }
       .iac-gallery__item--departments--admission {
         background-image: linear-gradient(105deg, rgba(17, 45, 78, 0.9) 0%, rgba(17, 45, 78, 0.9) 70%, transparent 70%), url(../img/admission-office-department.webp); }
         @media only screen and (max-width: 600px) {
@@ -4156,11 +4156,16 @@ body {
 
 .dev {
     //color: var(--color-secondary-dark-4);
-    padding: 25rem 20rem;
+    padding: 10rem 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--color-secondary-dark-3);
+}
+@media only screen and (max-width: 25em) {
+  .dev{
+    padding: 10rem 10rem;
+  }
 }
 
 .dev__heading {

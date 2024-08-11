@@ -7,8 +7,11 @@ dateAndIndicatorContainer.forEach(container => {
 });
 
 eventItems.forEach(item => {
-    item.addEventListener("mouseenter", () => setItemActive(item));
+    ['mouseenter', 'touchstart'].forEach(event => {
+        item.addEventListener(event, () => setItemActive(item));
+    });
 });
+
 
 function setItemActive(item) {
     const container = item.querySelector(".events-gallery__date-and-indicator");
