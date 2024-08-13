@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            const query = searchInput.value.toLowerCase();
+            const query = searchInput.value.toLowerCase().replace(/\s+/g, '');
             let found = false;
 
             searchableElements.forEach(element => {
-                if (element.textContent.toLowerCase().includes(query)) {
+                const elementText = element.textContent.toLowerCase().replace(/\s+/g, '');
+                if (elementText.includes(query)) {
                     found = true;
                     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     searchToggle.checked = false;
@@ -22,4 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
 });
+
+document.getElementById('search-toggle').addEventListener('click', function() {
+        var useElement = document.querySelector('#search-icon use');
+        var currentIcon = useElement.getAttribute('xlink:href');
+        var newIcon = currentIcon === '../img/sprite.svg#icon-search' ? '../img/sprite.svg#icon-cross' : '../img/sprite.svg#icon-search';
+        useElement.setAttribute('xlink:href', newIcon);
+    });
